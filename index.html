@@ -3,9 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0%;
+            padding: 0%;
+        }
+        .container{
+            min-height: 100vh;
+            font-family: "Poppins", serif;
+            text-align: center;
+        }
+        .container input{
+            display: flex;
+            margin: 1% 46%;
+            font-size: 150%;
+        }
+        .container select{
+            display: flex;
+            margin: 1% 46%;
+            font-size: 150%;
+        }
+        footer{
+            text-align: center;
+            font-family: "Poppins", serif;
+        }
+        nav{
+            font-family: "Noto Sans", sans-serif;
+            font-weight: 900;
+            display: flex;
+            font-size: 100%;
+            background-color: aliceblue;
+            padding: 0%;
+        }
+        nav ul li{
+            list-style-type: none; 
+            margin: 0% 20% ;
+        }
+        nav ul{
+            display: flex;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color:black;
+            transition: all;
+            transition-duration: 0.5s;
+
+        }
+        nav ul li a:hover{
+            color: brown;
+        }
+        .btn:hover{
+            color:brown
+        }
+    </style>
 </head>
 <body>
-    
+    <nav>
+        <div class="logo"
+            style="
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            ">MCC</div>
+        <ul>
+            <li><a href=/home>Home</a></li>
+            <li><a href=/aboutus>About Us</a></li>
+            <li><a href=/services>Services</a></li>
+            <li><a href=/contact>Contact</a></li>
+        </ul>
+
+    </nav>
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <label for="Currency">Choose your currency: </label>
+        <select name="Currency">
+            <option value="INR">Indian Rupee</option>
+            <option value="USD">US Dollar</option>
+            <option value="EUR">Euro</option>
+        </select>
+        <label for="quantity">Choose your quantity:</label>
+        <input type="number" name="quantity" min="1" max="100000"/>
+        <button class="btn" type="submit" style=" 
+        width: 10%;
+        padding: 0.2%;
+        background:plum;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all;
+        transition-duration: 500ms;"
+        >Submit</button>
+        <div class="output">
+            <table>
+                <caption>Converted currency table:</caption>
+                <thead>
+                    <tr>
+                        <th>Currency and value:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        Copyright &copy; all rights reserved.
+
+    </footer>
+    <script>
+
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
